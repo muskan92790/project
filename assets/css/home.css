@@ -1,0 +1,85 @@
+/* Home Section */
+.home {
+  text-align: center;
+  padding: 60px 30px;
+  background: linear-gradient(135deg, #2b6cb0, #364152);
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  margin: 30px auto;
+  max-width: 1200px;
+}
+
+/* Title Styling */
+.home h1 {
+  font-size: 3rem;
+  margin-bottom: 25px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Paragraph Styling */
+.home p {
+  font-size: 1.4rem;
+  margin-bottom: 35px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+  color: #d1d9e6;
+}
+
+/* Bottom Links Section */
+.bottom {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 50px;
+}
+
+/* Styling for the links */
+.bottom a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  background: linear-gradient(90deg, #4299e1, #2b6cb0);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Effect for Links */
+.bottom a:hover {
+  background: linear-gradient(90deg, #2c5282, #2b6cb0);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home {
+    padding: 40px 20px;
+    max-width: 95%;
+  }
+
+  .home h1 {
+    font-size: 2.5rem;
+  }
+
+  .home p {
+    font-size: 1.1rem;
+  }
+
+  .bottom {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .bottom a {
+    font-size: 1.1rem;
+    padding: 12px 25px;
+  }
+}

@@ -1,0 +1,145 @@
+/* Main container for the layout */
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+/* Left section styling */
+.left-section, .right-section {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Adjust left section to take more space */
+.left-section {
+    flex: 2;
+}
+
+/* Right section styling */
+.right-section {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures outcomes list stays at the bottom */
+}
+
+/* Heading style */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="number"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    gap: 30px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Styling for select dropdown */
+select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    appearance: none; /* Removes default dropdown arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+select:focus {
+    outline: none;
+    border-color: #4CAF50; /* Add border color when focused */
+}
+
+/* Outcomes list */
+#outcomes-list {
+    flex-grow: 1; /* Ensures the list takes up available space */
+    margin-top: 20px;
+    overflow-y: auto; /* Allows scrolling if the list is long */
+    padding-bottom: 20px; /* Adds spacing at the bottom */
+}
+
+/* Table for outcomes list */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Link styling */
+a {
+    color: #ff4d4d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    /* Other modal styles */
+}
+
+.modal.show {
+    display: block;
+}
+
+/* Adjust the layout on smaller screens */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-section, .right-section {
+        flex: 1 1 100%; /* Make sections stack on small screens */
+    }
+}

@@ -1,0 +1,189 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #f4f4f8;
+  color: #2c2c34;
+  box-sizing: border-box;
+}
+
+/* Navbar Styles */
+#my-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #2c3e50, #3b4a60);
+  color: #fff;
+  padding: 15px 25px;
+  position: fixed;
+  height: 70px;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-logo h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#nav-name {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.navbar-select select {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #d1d9e6;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #2c3e50;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  right: 50px;
+  position: relative;
+}
+
+.navbar-select select:hover {
+  border-color: #4a90e2;
+  background-color: #e3f2fd;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 260px;
+  background: linear-gradient(135deg, #1e2a38, #273646);
+  color: #fff;
+  padding: 30px;
+  height: 100vh;
+  position: fixed;
+  top: 70px; /* Align below navbar */
+  left: 0;
+  z-index: 999;
+  overflow-y: auto;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav ul li {
+  margin: 20px 0;
+}
+
+.sidebar-nav ul li a {
+  text-decoration: none;
+  color: #cfd8e3;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  transition: all 0.3s ease;
+}
+
+.sidebar-nav ul li a:hover {
+  color: #fff;
+  background: linear-gradient(90deg, #ff5e57, #d84315);
+  transform: translateX(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar-nav ul li .icon {
+  margin-right: 12px;
+  font-size: 22px;
+}
+
+/* Content Area Styles */
+.main-layout {
+  display: flex;
+  margin-top: 70px; /* Account for navbar height */
+}
+
+.content {
+  margin-left: 260px; /* Sidebar width */
+  padding: 40px;
+  flex: 1;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.content-area {
+  border-radius: 15px;
+  padding: 30px;
+  background: #f7f8fa;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styles */
+footer {
+  background: linear-gradient(135deg, #2c3e50, #3b4a60);
+  color: #fff;
+  text-align: center;
+  padding: 15px 25px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+  box-shadow: 0 -3px 15px rgba(0, 0, 0, 0.5);
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+      width: 230px;
+  }
+
+  .content {
+      margin-left: 230px;
+  }
+
+  .navbar-logo h2 {
+      font-size: 24px;
+  }
+
+  .navbar-select select {
+      font-size: 14px;
+  }
+
+  .sidebar-nav ul li a {
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+      width: 200px;
+  }
+
+  .content {
+      margin-left: 200px;
+  }
+
+  .navbar-logo h2 {
+      font-size: 20px;
+  }
+
+  .navbar-select select {
+      font-size: 12px;
+  }
+
+  .sidebar-nav ul li a {
+      font-size: 14px;
+  }
+}
