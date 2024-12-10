@@ -201,7 +201,7 @@ function loadQuestions(courseCode) {
                     const li = document.createElement('li');
                     li.innerHTML = `
                         <strong>QS${index + 1}:${question.question_text}</strong> 
-                        (Marks: ${question.marks}, Level: ${question.level}, OC: ${question.outcome_id})
+                        (Marks: ${question.marks}, Level: ${question.level}, OC:OC${index + 1})
                         <br>OC${index + 1}: ${question.outcome_text}
                         <button class="edit" 
                             onclick="editQuestion(${question.id}, '${question.question_text.replace(/'/g, "\\'")}', ${question.marks}, '${question.level}', '${question.outcome_id}')">
