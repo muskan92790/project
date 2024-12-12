@@ -1,3 +1,4 @@
+/* Dashboard Container */
 .container {
     display: flex;
     flex-direction: column;
@@ -5,37 +6,26 @@
     max-width: 1200px;
     margin: 10px auto;
     padding: 30px;
-    border: 1px solid #ccc; 
-    /* background: linear-gradient(135deg, #393941a5, #d7d7df); */
-    background-color: #fff;
-            
-
-    /* background-color: #ccc; */
+    border: 1px solid #ccc;
+    background-color: #ffffff;
     border-radius: 12px;
-
 }
 
 header {
-  /* color: #13005A; */
-  text-align: center;
-  /* margin-bottom: 20px; */
-}           
-           
-header h2 {
+    text-align: center;
+}
 
+header h2 {
     font-size: 2rem;
- 
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: bold;
+    color: #2b6cb0;
 }
 
-    
-            
-
-.main-layout {           
-    display: flex;           
-    gap: 20px;            
+.main-layout {
+    display: flex;
+    gap: 20px;
 }
 
 .left-section {
@@ -43,32 +33,34 @@ header h2 {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    /* color: #2b6cb0; */
+    font-weight: bold;
     padding: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    /* background-color: #f9f9f9; */
-}          
+    background-color: #f8f9fa;
+}
 
 .right-section {
     flex: 2;
-    color: #a49ebb;
+    /* color: #2b6cb0; */
     padding: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    /* background-color: #f4f4f4; */
+    background-color: #ecf0f1;
 }
 
 .filter-section {
     display: flex;
     flex-direction: column;
     gap: 10px;
-}           
+}
 
 .filter-section div {
     display: flex;
     flex-direction: column;
     gap: 5px;
-}           
+}
 
 form {
     display: flex;
@@ -78,106 +70,21 @@ form {
 
 form label {
     font-weight: bold;
-}          
+    /* color: #2b6cb0; */
+
+}
 
 form select, button {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    background-color: #ffffff;
+    color: #2c3e50;
 }
 
-.question-list {
-    
-    margin-top: 20px;
-}
-
-#qs{
-    color: #13005A;
-}
-.question-list h3 {
-    
-    margin-bottom: 10px;
-}           
-
-.question-list ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.question-list ul li {
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 5px;
-}           
-    
-/* Filter Section */
-.filter-section {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-
-.filter-section div {
-    flex: 1;
-}
-
-.filter-section label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 1.1rem;
-    /* color: #ddd; */
-    color: #13005A;
-    font-weight: 600;
-}
-
-.filter-section select {
-    width: 100%;
-    padding: 12px;
-    background-color: #444;
-    border: 1px solid #555;
-    color: #fff;
-    border-radius: 6px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-.filter-section select:focus {
-    outline: none;
-    border-color: #ff5722;
-    box-shadow: 0 0 5px rgba(255, 87, 34, 0.5);
-}
-
-/* Filter Form */
-#filterForm {
-    margin-top: 30px;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-#filterForm label {
-    font-size: 1.1rem;
-    /* color: #ddd; */
-    color: #13005A;
-    font-weight: 600;
-}
-
-#filterForm select {
-    width: 150px;
-    padding: 12px;
-    background-color: #444;
-    border: 1px solid #555;
-    color: #fff;
-    border-radius: 6px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-#filterForm button {
-    background-color:#4CAF50 ;
-    color: #fff;
+form button {
+    background-color: #3498db;
+    color: #ffffff;
     padding: 12px 25px;
     border: none;
     border-radius: 6px;
@@ -186,80 +93,68 @@ form select, button {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-#filterForm button:hover {
-    background-color: #d91010;
+form button:hover {
+    background-color: #364152;
     transform: translateY(-3px);
+
 }
 
-/* Question List */
 .question-list {
-    margin-top: 40px;
+    margin-top: 20px;
+}
+
+#qs {
+    color: #2b6cb0;
+
 }
 
 .question-list h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #fff;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #2b6cb0;
+
     font-weight: bold;
 }
 
-/* Style for Filtered Questions & Report */
-#filteredQuestions,
-#report {
-    list-style: none;
+.question-list ul {
+    list-style-type: none;
     padding: 0;
-    background-color: #333;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-#filteredQuestions li,
-#report li {
-    background-color: #444;
     padding: 15px;
-    margin: 10px 0;
-    border-radius: 8px;
-    color: #ddd;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-#filteredQuestions li:hover,
-#report li:hover {
-    background-color: #555;
-    transform: translateX(5px);
+.question-list ul li {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    background-color: #f8f9fa;
+    color: #2b6cb0;
+
+    transition: background-color 0.3s ease;
 }
 
-/* Add Hover Effect on List */
-#filteredQuestions li:hover,
-#report li:hover {
-    background-color: #ff5722;
-    color: #fff;
-    transform: scale(1.05);
+.question-list ul li:hover {
+    background-color: #dfe6e9;
 }
 
-/* Media Queries */
+/* Responsive Design */
 @media (max-width: 768px) {
+    .main-layout {
+        flex-direction: column;
+    }
+
     .filter-section {
-        flex-direction: column;
+        gap: 15px;
     }
 
-    #filterForm {
-        flex-direction: column;
-    }
-
-    #filterForm select {
+    form button {
         width: 100%;
-        margin-bottom: 15px;
-    }
-
-    #filterForm button {
-        width: 100%;
-        margin-top: 10px;
     }
 
     .question-list h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 }

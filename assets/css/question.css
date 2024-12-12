@@ -6,6 +6,12 @@
     padding: 20px;
      flex-wrap: wrap; /* Ensures the sections wrap on smaller screens */ 
 }
+ h2 {
+    
+    font-weight: bold;
+    color: #2b6cb0;
+}
+
 
 /* Style for the left section (form) */
 .left-section {
@@ -21,7 +27,7 @@
 /* Style for the right section (questions list) */
 .right-section {
     flex: 1;
-    max-width: 600px; /* Set max-width to prevent it from being too wide */
+    max-width: 485px; /* Set max-width to prevent it from being too wide */
     margin: 10px;
     padding: 20px;
     background: rgba(255, 255, 255, 0.1);
@@ -33,18 +39,31 @@
     position: relative;
     left: 600px; /* Adjust position to the right */
     bottom: 629px; /* Adjust position vertically */
-    max-width: 550px;
+    /* max-width: 550px; */
+}
+ h3 {
+   
+    font-weight: bold;
+    color: #2b6cb0;
 }
 select {
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    /* border: 1px solid #ddd; 
+    border-radius: 5px; */
     font-size: 16px;
     background-color: #f9f9f9;
     appearance: none; /* Removes default dropdown arrow */
     -webkit-appearance: none;
     -moz-appearance: none;
+}
+#marks{
+    border: 1px solid black; /* Border color */
+    border-radius: 0;
+}
+#questionText{
+    border: 1px solid black; /* Border color */
+    border-radius: 0;
 }
 
 /* Centering the form elements inside the left section */
@@ -68,7 +87,7 @@ input[type="text"], input[type="number"], textarea {
 /* Button styles */
 button {
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color:#2b6cb0 ;
     color: white;
     border: none;
     border-radius: 5px;
@@ -77,7 +96,8 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #364152;
+    transform: translateY(-3px);
 }
 
 /* Questions list table styling */

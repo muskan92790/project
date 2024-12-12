@@ -1,23 +1,24 @@
-
-
 .main-container {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
+    background-color: #ecf0f1;
 }
 
 .left-section, .right-section {
     flex: 1;
     margin: 10px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
+    background: #f8f9fa;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: #364152;
 }
 
 h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: #2b6cb0;
 }
 
 form {
@@ -27,43 +28,57 @@ form {
 
 label {
     margin-bottom: 10px;
+    color: #364152;
+    font-weight: bold;
 }
 
 input[type="text"], input[type="number"] {
     padding: 10px;
     margin-bottom: 20px;
-    border: none;
+    border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1rem;
+    color: #364152;
+    background-color: #ffffff;
 }
 
 button {
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #2b6cb0;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    gap: 30px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #364152;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    background-color: #ffffff;
 }
 
 table th, table td {
     padding: 10px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+    color: #364152;
 }
 
 table th {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #2b6cb0;
+    color: #ffffff;
 }
 
 a {
@@ -76,12 +91,31 @@ a:hover {
     text-decoration: underline;
 }
 
-
 .modal {
     display: none;
-    /* Other modal styles */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    z-index: 1000;
+    color: #364152;
+    width: 400px;
+    max-width: 90%;
 }
 
 .modal.show {
     display: block;
+}
+
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #364152;
 }

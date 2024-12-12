@@ -11,9 +11,9 @@
     flex: 1;
     margin: 10px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
+    background: #f0f4f8;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
 }
@@ -32,9 +32,10 @@
 }
 
 /* Heading style */
-h2 {
+h2, h3 {
     text-align: center;
     margin-bottom: 20px;
+    color: #2b6cb0;
 }
 
 /* Form styling */
@@ -45,27 +46,34 @@ form {
 
 label {
     margin-bottom: 10px;
+    font-weight: bold;
+    color: #364152;
 }
 
 input[type="text"], input[type="number"] {
     padding: 10px;
     margin-bottom: 20px;
-    border: none;
+    border: 1px solid #ddd;
     border-radius: 5px;
+    background-color: #ffffff;
+    color: #364152;
+    font-size: 1rem;
 }
 
 button {
     padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #2b6cb0;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    gap: 30px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #364152;
+    transform: translateY(-3px);
 }
 
 /* Styling for select dropdown */
@@ -74,8 +82,9 @@ select {
     margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 16px;
-    background-color: #f9f9f9;
+    font-size: 1rem;
+    background-color: #ffffff;
+    color: #364152;
     appearance: none; /* Removes default dropdown arrow */
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -83,7 +92,7 @@ select {
 
 select:focus {
     outline: none;
-    border-color: #4CAF50; /* Add border color when focused */
+    border-color: #2b6cb0; /* Add border color when focused */
 }
 
 /* Outcomes list */
@@ -94,42 +103,59 @@ select:focus {
     padding-bottom: 20px; /* Adds spacing at the bottom */
 }
 
-/* Table for outcomes list */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-table th, table td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-table th {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Link styling */
-a {
-    color: #ff4d4d;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 /* Modal styling */
 .modal {
     display: none;
-    /* Other modal styles */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    z-index: 1000;
+    max-width: 400px;
+    width: 100%;
 }
 
-.modal.show {
-    display: block;
+.modal-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal h2 {
+    margin-bottom: 20px;
+    color: #2b6cb0;
+    text-align: center;
+}
+
+.modal textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1rem;
+    color: #364152;
+}
+
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #364152;
+}
+
+.modal button {
+    background-color: #2b6cb0;
+    color: #ffffff;
+}
+
+.modal button:hover {
+    background-color: #364152;
 }
 
 /* Adjust the layout on smaller screens */
